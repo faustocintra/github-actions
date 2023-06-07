@@ -27,10 +27,4 @@ jobs:
             # 4) Fazer o build do projeto
             - run: npm run build
 
-            # 5) Publicar em GitHub pages
-            - name: Deploy 🚀
-              uses: JamesIves/github-pages-deploy-action@v4
-              with:
-                folder: build # The folder the action should deploy.
-
 
