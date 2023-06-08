@@ -1,10 +1,12 @@
 name: Deploy
-permissions:
-    contents: write
 on:
     push:
         # Ação será disparada quando for dado push no main
-        branches: [main]
+        branches: [ main ]
+
+permissions:
+    contents: write
+
 jobs:
     build-and-deploy:
         # Especifica a arquitetura do container
@@ -29,7 +31,7 @@ jobs:
             # 4) Fazer o build do projeto
             - run: npm run build
 
-            # 5) Publicar em GitHub pages
+            # 5) Fazer a publicação no GitHub Pages
             - name: Deploy 🚀
               uses: JamesIves/github-pages-deploy-action@v4
               with:
